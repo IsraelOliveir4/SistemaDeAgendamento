@@ -21,4 +21,4 @@ def test_criar_agendamento(client):
         "data": "2025-04-05",
         "horario": "14:00"
     }, follow_redirects=True)
-    assert b"João" in response.data
+    assert "João".encode("utf-8") in response.data
