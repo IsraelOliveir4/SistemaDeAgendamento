@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Novo Agendamento{% endblock %}
+
+{% block content %}
+    <h2>Criar Novo Agendamento</h2>
+    <form method="POST">
+        <label for="cliente">Cliente:</label>
+        <input type="text" name="cliente" id="cliente" required>
+
+        <label for="servico">Serviço:</label>
+        <input type="text" name="servico" id="servico" required>
+
+        <label for="data">Data:</label>
+        <input type="date" name="data" id="data" required>
+
+        <label for="horario">Horário:</label>
+        <input type="time" name="horario" id="horario" required>
+
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock %}

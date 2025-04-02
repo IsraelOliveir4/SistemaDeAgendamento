@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Agendamentos{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for agendamento in agendamentos %}
+            <li>{{ agendamento.cliente }} - {{ agendamento.servico }} - {{ agendamento.data }} - {{ agendamento.horario }}
+                <a href="{{ url_for('editar_agendamento', id=agendamento.id) }}">Editar</a>
+                <a href="{{ url_for('excluir_agendamento', id=agendamento.id) }}" onclick="return confirm('Tem certeza?')">Excluir</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

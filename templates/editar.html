@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar Agendamento{% endblock %}
+
+{% block content %}
+    <h2>Editar Agendamento</h2>
+    <form method="POST">
+        <label for="cliente">Cliente:</label>
+        <input type="text" name="cliente" id="cliente" value="{{ agendamento.cliente }}" required>
+
+        <label for="servico">Serviço:</label>
+        <input type="text" name="servico" id="servico" value="{{ agendamento.servico }}" required>
+
+        <label for="data">Data:</label>
+        <input type="date" name="data" id="data" value="{{ agendamento.data }}" required>
+
+        <label for="horario">Horário:</label>
+        <input type="time" name="horario" id="horario" value="{{ agendamento.horario }}" required>
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+{% endblock %}
