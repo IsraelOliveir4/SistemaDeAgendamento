@@ -8,7 +8,7 @@ Um CRUD simples para agendamentos utilizando Flask.
 ```sh
 git clone https://github.com/IsraelOliveir4/SistemaDeAgendamento
 
-cd seu-repositorio
+cd repositorio-clonado
 ```
 ### 2. Criar ambiente virtual:
 ```sh
