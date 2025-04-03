@@ -3,20 +3,34 @@
 {% block title %}Editar Agendamento{% endblock %}
 
 {% block content %}
-    <h2>Editar Agendamento</h2>
-    <form method="POST">
-        <label for="cliente">Cliente:</label>
-        <input type="text" name="cliente" id="cliente" value="{{ agendamento.cliente }}" required>
+<div class="container">
+    <h2 class="my-4 text-center">Editar Agendamento</h2>
 
-        <label for="servico">Serviço:</label>
-        <input type="text" name="servico" id="servico" value="{{ agendamento.servico }}" required>
+    <form method="POST" class="card p-4 shadow-sm">
+        <div class="mb-3">
+            <label for="cliente" class="form-label">Cliente:</label>
+            <input type="text" name="cliente" id="cliente" class="form-control" value="{{ agendamento.cliente }}" required>
+        </div>
 
-        <label for="data">Data:</label>
-        <input type="date" name="data" id="data" value="{{ agendamento.data }}" required>
+        <div class="mb-3">
+            <label for="servico" class="form-label">Serviço:</label>
+            <input type="text" name="servico" id="servico" class="form-control" value="{{ agendamento.servico }}" required>
+        </div>
 
-        <label for="horario">Horário:</label>
-        <input type="time" name="horario" id="horario" value="{{ agendamento.horario }}" required>
+        <div class="mb-3">
+            <label for="data" class="form-label">Data:</label>
+            <input type="date" name="data" id="data" class="form-control" value="{{ agendamento.data }}" required>
+        </div>
 
-        <button type="submit">Salvar Alterações</button>
+        <div class="mb-3">
+            <label for="horario" class="form-label">Horário:</label>
+            <input type="time" name="horario" id="horario" class="form-control" value="{{ agendamento.horario }}" required>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+        </div>
     </form>
+</div>
 {% endblock %}
